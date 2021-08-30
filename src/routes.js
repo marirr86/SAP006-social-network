@@ -5,8 +5,8 @@ import { register } from './pages/register.js';
 const routes = {
   '': login,
   '#register': register,
-  //        '/feed': feed,
-  //        '/reset': reset
+  '#feed': feed,
+  //'#reset': reset
 };
 
 function renderPage() {
