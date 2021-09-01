@@ -1,14 +1,3 @@
-/* firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  }); */
-
 export const register = () => {
   const div = document.createElement('div');
   const content = `
@@ -20,10 +9,11 @@ export const register = () => {
           </input>
           <input class="register-input" id="register-email" type="text" placeholder="Your e-mail">
           </input>
-          <input class="register-input" id="register-pass" type="password" minlength="8" required placeholder="Create a passwaord">
+          <p id="email-error" class="error-message font-work"></p>
+          <input class="register-input" id="register-pass" type="password" minlength="8" required placeholder="Create a password">
           </input>
           <p id="doesntMatch"></p>
-          <button class="register-input" id="btn-register-confirm" type="submit">Sign Up</button>
+          <button class="register-input" id="btn-register-confirm" type="submit">Register</button>
         </form>
       </div>
     </div>
@@ -34,6 +24,7 @@ export const register = () => {
   // const registerUser = div.querySelector('#register-userID');
   const registerEmail = div.querySelector('#register-email');
   const registerPass = div.querySelector('#register-pass');
+  // const emailError = register.querySelector('#email-error');
 
   registerBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -41,15 +32,11 @@ export const register = () => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(
-        // registerUser.value,
         registerEmail.value,
         registerPass.value,
       )
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
-        console.log(user);
+      .then(() => {
+        window.location.hash = '#feed';
       })
       .catch((error) => {
         const errorCode = error.code;
