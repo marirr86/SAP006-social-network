@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: black;
   font-family: "Monda", sans-serif;
   font-size: 16px;
   margin: 0;
@@ -7,6 +7,7 @@ body {
 
 img.image-desktop {
   display: none;
+  border-radius: 15px;
 }
 div.main-login,
 div.google-github-login,
@@ -17,6 +18,7 @@ div.login-data {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
 }
 div.main-login {
   width: 100vw;
@@ -30,12 +32,13 @@ form.register-input {
   align-items: center;
 }
 
+/* border radius dos botoes */ 
 input.login-input,
 input.register-input {
   width: 300px;
   height: 35px;
   background-color: rgb(220, 250, 230);
-  border-radius: 5px;
+  border-radius: 25px;
   border: solid 2px black;
   margin-top: 40px;
   font-family: "Monda", sans-serif;
@@ -50,7 +53,7 @@ button.register-input {
   width: 300px;
   height: 35px;
   background-color: rgb(174, 252, 200);
-  border-radius: 5px;
+  border-radius: 25px;
   border: solid 2px black;
   font-family: "Monda", sans-serif;
   text-align: center;
@@ -66,16 +69,18 @@ button.register-input {
   margin-top: 10px;
 }
 
+/* cor da letra de baixo */ 
 p.without-register {
   text-align: center;
   align-items: center;
-  color: #00000070;
+  color: white;
   font-size: 10px;
 }
 
+/* cor da letra de baixo */ 
 a.register {
   text-decoration: none;
-  color: #000000bb;
+  color: white;
   font-size: 10px;
 }
 
@@ -206,6 +211,12 @@ footer.footer {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  div.login-data {
+  background-image: url(../images/night.jpeg);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   div.main-login {
     display: flex;
@@ -215,6 +226,7 @@ footer.footer {
 
   div.login-images,
   div.login-data {
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,13 +236,12 @@ footer.footer {
     width: 0px;
   }
 
+  /* Como centralizar a foto? */
   div.login-data {
-    background-image: linear-gradient(
-      rgb(255, 255, 255),
-      rgba(179, 255, 204, 0.5)
-    );
+    background-image: url(../images/night.jpeg);
     width: 500px;
-    height: 550px;
+    height: 500px;
+    display: flex;
   }
 
   img.image-desktop {
