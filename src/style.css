@@ -244,6 +244,7 @@ footer.footer {
     width: 500px;
     height: 500px;
     display: flex;
+    background-repeat: no-repeat;
   }
 
   img.image-desktop {
