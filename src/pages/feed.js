@@ -3,10 +3,9 @@ export const feed = () => {
   const content = ` 
     <div class="container-feed">
 
-      <header class="head-feed">
-        <span>casinha</span>
-        <h1 class="title-feed">Homescreen</h1>
-      </header>
+      <div class="logo-feed">
+        <img src="images/HINT-small.png" />
+      </div>
 
       <div class="post-area">
         <form action="" class="form-post">

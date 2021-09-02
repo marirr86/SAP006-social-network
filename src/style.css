@@ -304,16 +304,14 @@ footer.footer {
 
 .container-feed {
   background-color: black;
-  height: 100vh;
+  background-size: cover;
+  border: 1px solid rgb(0, 255, 13);
 }
 
-.title-feed {
-  display: inline-block;
-  color: antiquewhite;
-}
-
-.head-feed {
+.logo-feed {
   text-align: center;
+  background: no-repeat;
+  border: 1px solid red;
 }
 
 .post-area {
