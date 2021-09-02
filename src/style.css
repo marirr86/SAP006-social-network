@@ -5,6 +5,8 @@ body {
   margin: 0;
 }
 
+/* SIGN IN / SIGN UP */
+
 img.image-desktop {
   display: none;
   border-radius: 15px;
@@ -242,6 +244,7 @@ footer.footer {
     width: 500px;
     height: 500px;
     display: flex;
+    background-repeat: no-repeat;
   }
 
   img.image-desktop {
@@ -307,4 +310,68 @@ footer.footer {
   button.btn-dislike {
     font-size: 16px;
   }
+}
+
+/* FEED */
+
+.container-feed {
+  background-color: black;
+  background-size: cover;
+  border: 1px solid rgb(0, 255, 13);
+}
+
+.logo-feed {
+  text-align: center;
+  background: no-repeat;
+  border: 1px solid red;
+}
+
+.post-area {
+  border: 1px solid red;
+  color: black;
+  background-color: #DFF0BB;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 290px;
+  border-radius: 15px;
+  
+}
+
+.form-post {
+  border: 1px solid rgb(240, 221, 51);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  padding: 10px;
+}
+
+.review-label {
+  margin-bottom: 10px;
+}
+
+.post-place {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 10px;
+  width: 350px;
+  text-align: center;
+}
+
+.post-review {
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+.submit {
+  display: block;
 }
