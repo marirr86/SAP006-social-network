@@ -28,6 +28,7 @@ div.main-login {
 }
 form.login-input,
 form.register-input {
+  background-image: url(../images/night.jpeg);
   display: flex;
   flex-direction: column;
   justify-content: center;
