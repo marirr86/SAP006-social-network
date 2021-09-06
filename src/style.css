@@ -75,6 +75,7 @@ button.register-input {
 p.without-register {
   text-align: center;
   align-items: center;
+  margin-top: 20px;
   color: white;
   font-size: 10px;
 }
@@ -82,6 +83,7 @@ p.without-register {
 /* cor da letra de baixo */ 
 a.register {
   text-decoration: none;
+  margin-top: 10px;
   color: white;
   font-size: 10px;
 }
@@ -239,10 +241,12 @@ footer.footer {
   }
 
   /* Como centralizar a foto? */
+
   div.login-data {
     background-image: url(../images/night.jpeg);
-    width: 500px;
-    height: 500px;
+    background-size: cover;
+    /*width: 500px;
+    height: 500px;*/
     display: flex;
     background-repeat: no-repeat;
   }

@@ -3,7 +3,6 @@ export const login = () => {
   const content = `
   <div class="main-login">
     <div class="login-images">
-      <img class="logo" src="images/HINT-removebg-preview.png">
       <img class="image-desktop" src="images/hint-green.png">
     </div>
     

@@ -20,6 +20,7 @@ export const feed = () => {
       `;
 
   div.innerHTML = content;
+
   return div;
 };
 
