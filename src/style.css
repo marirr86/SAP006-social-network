@@ -376,3 +376,7 @@ footer.footer {
 .submit {
   display: block;
 }
+
+#containerPost {
+  color: aquamarine;
+}

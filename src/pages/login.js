@@ -8,8 +8,9 @@ export const login = () => {
     </div>
     
     <div class="login-data">
+
       <div class="mail-login">
-        <form class="login-input">
+      <form class="login-input">
           <input class="login-input" id="email-login" type="text" placeholder="Enter your e-mail adress">
           </input>
           <input class="login-input" id="password-login" type="password" placeholder="Password">
@@ -18,7 +19,9 @@ export const login = () => {
           <p id="loginError"></p>
         </form>
       </div>
+
       <h4>OU</h4>
+
       <div class="google-login">
         <button class="login-google" type="submit">Login with Google</button>
       </div>
@@ -37,11 +40,10 @@ export const login = () => {
   const googleBtn = div.querySelector('.login-google');
   const loginError = div.querySelector('#loginError');
 
+  // Login with email and pass
   loginBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(getEmail.value, getPass.value)
+    firebase.auth().signInWithEmailAndPassword(getEmail.value, getPass.value)
       .then(() => {
         window.location.hash = '#feed';
       })
@@ -57,11 +59,10 @@ export const login = () => {
       });
   });
 
+  // Login with google
   googleBtn.addEventListener('click', () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase
-      .auth()
-      .signInWithPopup(provider)
+    firebase.auth().signInWithPopup(provider)
       .then(() => {
         window.location.hash = '#feed';
       })
