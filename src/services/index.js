@@ -7,22 +7,18 @@ export const postarMensagem = (postagem) => db.collection('postagens').add(posta
 export const readPost = () => db.collection('postagens').get();
 
 // likes
-export const likePost = (idUser, idPost) => {
-  firebase
-    .firestore()
-    .collection('postagens')
-    .doc(idPost)
-    .update({ like: firebase.firestore.FieldValue.arrayUnion(idUser) });
-};
+export const likePost = (idUser, idPost) => firebase
+  .firestore()
+  .collection('postagens')
+  .doc(idPost)
+  .update({ like: firebase.firestore.FieldValue.arrayUnion(idUser) });
 
 // Deslike
-export const deslikePost = (idUser, idPost) => {
-  firebase
-    .firestore()
-    .collection('postagens')
-    .doc(idPost)
-    .update({ like: firebase.firestore.FieldValue.arrayRemove(idUser) });
-};
+export const deslikePost = (idUser, idPost) => firebase
+  .firestore()
+  .collection('postagens')
+  .doc(idPost)
+  .update({ like: firebase.firestore.FieldValue.arrayRemove(idUser) });
 
 /* .then((querySnapshot) => {
     querySnapshot.forEach((doc) => {

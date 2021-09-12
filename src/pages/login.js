@@ -41,6 +41,7 @@ export const login = () => {
   const loginError = div.querySelector('#loginError');
 
   // Login with email and pass
+
   loginBtn.addEventListener('click', (event) => {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(getEmail.value, getPass.value)
@@ -60,6 +61,7 @@ export const login = () => {
   });
 
   // Login with google
+
   googleBtn.addEventListener('click', () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)

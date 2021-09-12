@@ -30,7 +30,7 @@ export const feed = () => {
   const btn = div.querySelector('#submit-post');
   const postContainer = div.querySelector('#containerPost');
 
-  console.log(postContainer);
+  // console.log(postContainer);
 
   readPost().then((allPosts) => {
     allPosts.forEach((doc) => {
@@ -43,7 +43,7 @@ export const feed = () => {
       };
       // console.log(objPost);
       const elementCard = card(objPost);
-      console.log(elementCard);
+      // console.log(elementCard);
       postContainer.appendChild(elementCard);
     });
   });
@@ -51,11 +51,12 @@ export const feed = () => {
   btn.addEventListener('click', () => {
     const msg = div.querySelector('#mensagem').value;
     const place = div.querySelector('#lugar').value;
+    const user = firebase.auth().currentUser;
 
     const postagem = {
       local: place,
       mensagem: msg,
-      autora: 'Fulana',
+      autora: user.uid,
       like: [],
     };
 
@@ -65,6 +66,7 @@ export const feed = () => {
           id: docRef.id,
           ...postagem,
         };
+        window.location.reload();
         console.log(objNewPost);
         console.log('Document written with ID: ', docRef.id);
       })
