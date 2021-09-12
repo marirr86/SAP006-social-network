@@ -6,6 +6,9 @@ export const postarMensagem = (postagem) => db.collection('postagens').add(posta
 // Reading Post
 export const readPost = () => db.collection('postagens').get();
 
+// Delete posts
+export const delPost = (idPost) => firebase.firestore().collection('postagens').doc(idPost).delete();
+
 // likes
 export const likePost = (idUser, idPost) => firebase
   .firestore()
@@ -19,6 +22,15 @@ export const deslikePost = (idUser, idPost) => firebase
   .collection('postagens')
   .doc(idPost)
   .update({ like: firebase.firestore.FieldValue.arrayRemove(idUser) });
+
+// Update post
+export const editPost = (idPost, novaMensagem) => firebase
+  .firestore()
+  .collection('postagens')
+  .doc(idPost)
+  .update({
+    mensagem: novaMensagem,
+  });
 
 /* .then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
