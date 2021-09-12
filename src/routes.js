@@ -22,33 +22,8 @@ window.addEventListener('load', () => {
   renderPage();
 });
 
-/* document.addEventListener('DOMcontent', () => {
-  const loadEl = document.querySelector('#root');
+const root = document.getElementById('root');
 
-  try {
-    firebase.app();
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        window.location.hash = 'timeline'
-      }
-    });
-  } catch (e) {
-    console.error(e);
-    loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-  }
-});
+root.innerHTML = '';
 
-/* const init = () => {
-  document.querySelector('#root').innerHTML = '';
-  switch (window.location.hash) {
-    case '#register':
-      c.appendChild(register());
-      break;
-    case '#timeline':
-      container.appendChild(feed());
-      break;
-    default:
-      container.appendChild(login());
-  }
-};
-*/
+root.appendChild(feed());
