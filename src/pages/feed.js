@@ -56,7 +56,7 @@ export const feed = () => {
     const postagem = {
       local: place,
       mensagem: msg,
-      autora: user.uid,
+      autora: user.displayName,
       like: [],
     };
 
@@ -68,7 +68,7 @@ export const feed = () => {
         };
         window.location.reload();
         console.log(objNewPost);
-        console.log('Document written with ID: ', docRef.id);
+        // console.log('Document written with ID: ', docRef.id);
       })
       .catch((error) => {
         console.error('Error adding document: ', error);
