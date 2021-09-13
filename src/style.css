@@ -1,12 +1,15 @@
 body {
-  background-color: #fff;
-  font-family: "Monda", sans-serif;
+  background-color: black;
+  font-family: "Lucida Console", monospace;
   font-size: 16px;
   margin: 0;
 }
 
+/* SIGN IN / SIGN UP */
+
 img.image-desktop {
   display: none;
+  border-radius: 15px;
 }
 div.main-login,
 div.google-github-login,
@@ -17,11 +20,14 @@ div.login-data {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+  padding-bottom: 35px;
 }
 div.main-login {
   width: 100vw;
   height: 100vh;
 }
+
 form.login-input,
 form.register-input {
   display: flex;
@@ -30,15 +36,16 @@ form.register-input {
   align-items: center;
 }
 
+/* border radius dos botoes */ 
 input.login-input,
 input.register-input {
   width: 300px;
   height: 35px;
   background-color: rgb(220, 250, 230);
-  border-radius: 5px;
+  border-radius: 25px;
   border: solid 2px black;
   margin-top: 40px;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   text-align: center;
   font-size: 16px;
 }
@@ -50,9 +57,9 @@ button.register-input {
   width: 300px;
   height: 35px;
   background-color: rgb(174, 252, 200);
-  border-radius: 5px;
+  border-radius: 25px;
   border: solid 2px black;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   text-align: center;
   font-size: 16px;
 }
@@ -66,26 +73,28 @@ button.register-input {
   margin-top: 10px;
 }
 
+/* cor da letra de baixo */ 
 p.without-register {
   text-align: center;
   align-items: center;
-  color: #00000070;
-  font-size: 10px;
+  color: white;
+  font-size: 15px;
 }
 
+/* cor da letra de baixo */ 
 a.register {
   text-decoration: none;
-  color: #000000bb;
-  font-size: 10px;
+  color: white;
+  font-size: 20px;
 }
 
-header.home {
+/* header.home {
   display: flex;
   background-color: #8293a8;
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 10px #efeee9;
-}
+} */
 
 img.logo-home {
   width: 50px;
@@ -101,7 +110,7 @@ button.btn-submitEdit {
   background-color: #8293a8;
   border-radius: 5px;
   border: solid 2px black;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   text-align: center;
   font-size: 14px;
   margin-right: 15px;
@@ -116,7 +125,7 @@ button.btn-dislike {
   background-color: #8293a8;
   border-radius: 5px;
   border: solid 2px black;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   text-align: center;
   font-size: 14px;
   margin-right: 15px;
@@ -143,7 +152,7 @@ div.post-profile {
 img.profile-img {
   width: 80px;
   height: 80px;
-}
+} 
 
 h2.profile-displayName {
   display: none;
@@ -157,7 +166,7 @@ form#post-form {
 input#post-text {
   height: 80px;
   width: 65vw;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   text-align: center;
   font-size: 14px;
   padding: 0;
@@ -206,6 +215,13 @@ footer.footer {
   }
 }
 
+
+@media only screen and (max-width: 768px) {
+  div.login-data {
+  background-image: url(../images/night.jpeg);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   div.main-login {
     display: flex;
@@ -215,6 +231,7 @@ footer.footer {
 
   div.login-images,
   div.login-data {
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,13 +241,13 @@ footer.footer {
     width: 0px;
   }
 
+  /* Como centralizar a foto? */
   div.login-data {
-    background-image: linear-gradient(
-      rgb(255, 255, 255),
-      rgba(179, 255, 204, 0.5)
-    );
+    background-image: url(../images/night.jpeg);
+    background-size: 100%;
     width: 500px;
-    height: 550px;
+    height: 500px;
+    display: flex;
   }
 
   img.image-desktop {
@@ -296,4 +313,112 @@ footer.footer {
   button.btn-dislike {
     font-size: 16px;
   }
+}
+
+/* FEED */
+
+.container-feed {
+  background-color: black;
+  background-size: cover;
+}
+
+.logo-feed {
+  text-align: center;
+  background: no-repeat;
+}
+
+.post-area {
+  color: black;
+  background-color: #DFF0BB;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 290px;
+  border-radius: 15px;
+  
+}
+
+.form-post {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  padding: 10px;
+}
+
+.review-label {
+  margin-bottom: 10px;
+}
+
+.post-place {
+  display: block;
+  font-family: "Lucida Console", monospace;
+  margin-bottom: 10px;
+  width: 350px;
+  text-align: center;
+}
+
+.post-review {
+  font-family: "Lucida Console", monospace;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+.submit {
+  display: block;
+}
+
+#containerPost {
+  font-family: "Lucida Console", monospace;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 100px; 
+}
+
+.curtido {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.descurtido {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+h2{
+  color: #114705;
+  margin-top: 6%;
+}
+
+p {
+  color: #358c00;
+}
+
+.del-button {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.edit-button {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.save-button {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 2%;
 }

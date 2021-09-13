@@ -2,7 +2,7 @@ export const register = () => {
   const div = document.createElement('div');
   const content = `
     <div class="main-register">
-      <img class="logo" src="../../images/flightrip.png"/>
+      <img class="logo" src="images/HINT-removebg-preview.png"/>
       <div class="register">
         <form class="register-input">
           <input class="register-input" id="register-userID" type="text" placeholder="Username">
