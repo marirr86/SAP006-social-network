@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-/* SIGN IN / SIGN UP */
+/* SIGN IN/UP/GOOGLE */ 
 
 img.image-desktop {
   display: none;
@@ -297,55 +297,73 @@ footer.footer {
     width: 400px;
   }
 
-  div.agreement {
-    margin-top: 0;
-  }
+/* FEED */
 
-  a.register {
-    margin-left: 3px;
-  }
+.container-feed {
+  background-color: black;
+  background-size: cover;
+}
 
-  header.home,
-  div.post-profile {
-    border-bottom: solid 15px #efeee9;
-  }
+.logo-feed {
+  text-align: center;
+  background: no-repeat;
+}
 
-  img.logo-home {
-    width: 10px;
-  }
+.post-area {
+  color: black;
+  background-color: #DFF0BB;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 290px;
+  border-radius: 15px;
+  
+}
 
-  button#sgnOutBtn,
-  button#form-button,
-  button.btn-submitEdit {
-    width: 80px;
-    height: 35px;
-    font-size: 16px;
-  }
+.form-post {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  padding: 10px;
+}
 
-  img.profile-img {
-    width: 100px;
-    height: 100px;
-  }
+.review-label {
+  margin-bottom: 10px;
+}
 
-  input#post-text {
-    height: 100px;
-    width: 85vw;
-    font-size: 16px;
-  }
+.post-place {
+  display: block;
+  font-family: "Lucida Console", monospace;
+  margin-bottom: 10px;
+  width: 350px;
+  text-align: center;
+}
 
-  button.btn-edit,
-  button.btn-delete,
-  button.btn-like,
-  button.btn-dislike {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-  }
+.post-review {
+  font-family: "Lucida Console", monospace;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
 
-  img.post-img {
-    width: 80px;
-    height: 80px;
-  }
+.submit {
+  display: block;
+}
+
+#containerPost {
+  font-family: "Lucida Console", monospace;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 100px; 
+}
 
   span.post-displayName-info,
   p.post-content,

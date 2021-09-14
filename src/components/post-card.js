@@ -2,7 +2,6 @@ import {
   likePost, deslikePost, delPost, editPost,
 } from '../services/index.js';
 
-
 export const card = (objPost) => {
   const idUser = firebase.auth().currentUser.uid;
   let classLike = 'muda-cor';
