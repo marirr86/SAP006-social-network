@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   font-size: 16px;
   margin: 0;
 }
@@ -21,14 +21,16 @@ div.login-data {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  padding-bottom: 35px;
 }
+
 div.main-login {
   width: 100vw;
   height: 100vh;
 }
+
 form.login-input,
 form.register-input {
-  background-image: url(../images/night.jpeg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,21 +45,20 @@ input.register-input {
   border-radius: 25px;
   border: solid 2px black;
   margin-top: 40px;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   text-align: center;
   font-size: 16px;
 }
 
 button.login-input,
 button.login-google,
-button.login-github,
 button.register-input {
   width: 300px;
   height: 35px;
   background-color: rgb(174, 252, 200);
   border-radius: 25px;
   border: solid 2px black;
-  font-family: "Monda", sans-serif;
+  font-family: "Lucida Console", monospace;
   text-align: center;
   font-size: 16px;
 }
@@ -75,14 +76,13 @@ p.without-register {
   text-align: center;
   align-items: center;
   color: white;
-  font-size: 10px;
+  font-size: 15px;
 }
  
 a.register {
   text-decoration: none;
   color: white;
-  font-size: 10px;
-  font-weight: bolder;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 678px) {
@@ -134,17 +134,14 @@ a.register {
 .container-feed {
   background-color: black;
   background-size: cover;
-  border: 1px solid rgb(0, 255, 13);
 }
 
 .logo-feed {
   text-align: center;
   background: no-repeat;
-  border: 1px solid red;
 }
 
 .post-area {
-  border: 1px solid red;
   color: black;
   background-color: #DFF0BB;
   align-content: center;
@@ -158,7 +155,6 @@ a.register {
 }
 
 .form-post {
-  border: 1px solid rgb(240, 221, 51);
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -176,16 +172,17 @@ a.register {
 
 .post-place {
   display: block;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Lucida Console", monospace;
   margin-bottom: 10px;
   width: 350px;
   text-align: center;
 }
 
 .post-review {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Lucida Console", monospace;
   margin-bottom: 20px;
   text-align: center;
+  
 }
 
 .submit {
@@ -193,13 +190,49 @@ a.register {
 }
 
 #containerPost {
-  color: aquamarine;
+  font-family: "Lucida Console", monospace;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 100px; 
 }
 
 .curtido {
-  background-color: green;
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
 }
 
 .descurtido {
-  background-color:blue;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+h2{
+  color: #114705;
+  margin-top: 6%;
+}
+
+p {
+  color: #358c00;
+}
+
+.del-button {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.edit-button {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.save-button {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 2%;
 }

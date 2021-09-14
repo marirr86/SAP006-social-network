@@ -16,7 +16,7 @@ export const card = (objPost) => {
       <p>Visited Place: ${objPost.local}</p>
       <div data-text="${objPost.id}">${objPost.mensagem}</div>
       <button class="like-button ${classLike}" data-like="${objPost.id}">like</button>
-
+      
       <button class="del-button" data-del="${objPost.id}">delete</button>
       <button class="edit-button" data-edit="${objPost.id}">Edit</button>
       <button class="save-button" data-save="${objPost.id}">Save</button>
