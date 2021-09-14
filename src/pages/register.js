@@ -35,7 +35,8 @@ export const register = () => {
         registerEmail.value,
         registerPass.value,
       )
-      .then(() => {
+      .then((userDef) => {
+        console.log(userDef.user.updateProfile);
         window.location.hash = '#feed';
       })
       .catch((error) => {

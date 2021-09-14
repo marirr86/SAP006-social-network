@@ -5,11 +5,12 @@ export const feed = () => {
   const div = document.createElement('div');
   const content = ` 
     <div class="container-feed">
-
       <div class="logo-feed">
         <img src="images/HINT-small.png" />
       </div>
 
+      <button type='button' class='signout' id="button-signout">Sair</button>
+      
       <div class="post-area">
         <form action="" class="form-post">
           <label class="review-label" for="book-name">Add a new review</label>
@@ -19,9 +20,7 @@ export const feed = () => {
         </form>
       </div>
       <div class="containerPost" id="containerPost">
-        
       </div>
-    
     </div>
       `;
 
@@ -56,7 +55,7 @@ export const feed = () => {
     const postagem = {
       local: place,
       mensagem: msg,
-      autora: user.uid,
+      autora: user.displayName,
       like: [],
     };
 
@@ -68,7 +67,7 @@ export const feed = () => {
         };
         window.location.reload();
         console.log(objNewPost);
-        console.log('Document written with ID: ', docRef.id);
+        // console.log('Document written with ID: ', docRef.id);
       })
       .catch((error) => {
         console.error('Error adding document: ', error);
@@ -77,6 +76,7 @@ export const feed = () => {
 
   return div;
 };
+
 
 /* firebase.auth().signOut().then(() => {
   // Sign-out successful.

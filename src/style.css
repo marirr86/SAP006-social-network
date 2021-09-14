@@ -11,10 +11,17 @@ img.image-desktop {
   display: none;
   border-radius: 15px;
 }
-div.main-login,
-div.google-github-login,
+
 div.main-register,
-div.register,
+div.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-bottom: 35px;
+}
+
 div.login-data {
   display: flex;
   flex-direction: column;
@@ -23,17 +30,35 @@ div.login-data {
   border-radius: 15px;
   padding-bottom: 35px;
 }
-div.main-login {
-  width: 100vw;
-  height: 100vh;
-}
 
-form.login-input,
-form.register-input {
+div.main-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+  padding-bottom: 35px;
+  width: 100vw;
+  height: 100vh;
+}
+
+form.login-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-bottom: 95px;
+}
+
+form.register-input {
+  background-image: url(../images/night.jpeg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-bottom: 95px;
 }
 
 /* border radius dos botoes */ 
@@ -52,7 +77,6 @@ input.register-input {
 
 button.login-input,
 button.login-google,
-button.login-github,
 button.register-input {
   width: 300px;
   height: 35px;
@@ -64,8 +88,7 @@ button.register-input {
   font-size: 16px;
 }
 
-button.login-input,
-button.login-github {
+button.login-input {
   margin-top: 40px;
 }
 
@@ -216,14 +239,33 @@ footer.footer {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   div.login-data {
   background-image: url(../images/night.jpeg);
+  background-size: cover;
+  }
+
+  #containerPost {
+    font-family: "Lucida Console", monospace;
+    color: white;
+    padding-bottom: 20px;
+    padding: 20px 2px 20px 5px;
+  }
+
+  h2 {
+    color: #114705;
+    margin-top: 20%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   div.main-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  div.mail-login {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -313,6 +355,19 @@ footer.footer {
   button.btn-dislike {
     font-size: 16px;
   }
+
+  #containerPost {
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 100px; 
+  }
+
+  h2 {
+    color: #114705;
+    margin-top: 6%;
+  }
 }
 
 /* FEED */
@@ -354,6 +409,7 @@ footer.footer {
 
 .review-label {
   margin-bottom: 10px;
+  font-weight: bolder;
 }
 
 .post-place {
@@ -368,20 +424,19 @@ footer.footer {
   font-family: "Lucida Console", monospace;
   margin-bottom: 20px;
   text-align: center;
-  
 }
 
 .submit {
   display: block;
 }
 
-#containerPost {
+/* #containerPost {
   font-family: "Lucida Console", monospace;
   color: white;
   font-size: 20px;
   line-height: 20px;
   padding: 100px; 
-}
+} */
 
 .curtido {
   background-color:#808a6b;
@@ -393,11 +448,6 @@ footer.footer {
   background-color: white;
   border-radius: 5px;
   padding: 5px 5px 5px 5px;
-}
-
-h2{
-  color: #114705;
-  margin-top: 6%;
 }
 
 p {
@@ -421,4 +471,18 @@ p {
   border-radius: 5px;
   padding: 5px 5px 5px 5px;
   margin-top: 2%;
+}
+
+#submit-post {
+  background-color:#808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.button-signout {
+  background-color: #808a6b;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+  clip-path: url(http://localhost:5000);
 }

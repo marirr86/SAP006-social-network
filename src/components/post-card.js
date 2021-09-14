@@ -14,8 +14,7 @@ export const card = (objPost) => {
   const contentCard = ` 
       <h2>${objPost.autora}</h2>
       <p>Visited Place: ${objPost.local}</p>
-      <div data-text="${objPost.id}">${objPost.mensagem}
-      </div>
+      <div data-text="${objPost.id}">${objPost.mensagem}</div>
       <button class="like-button ${classLike}" data-like="${objPost.id}">Like</button>
       <button class="del-button" data-del="${objPost.id}">Delete</button>
       <button class="edit-button" data-edit="${objPost.id}">Edit</button>
@@ -27,13 +26,16 @@ export const card = (objPost) => {
   // LIKE / DESLIKE
   const likeBtn = infoDiv.querySelector(`[data-like="${objPost.id}"]`);
   likeBtn.addEventListener('click', () => {
+    console.log(likeBtn);
     if (objPost.like.includes(idUser)) {
       deslikePost(idUser, objPost.id).then(() => {
-        window.location.reload();
+        likeBtn.classList.add('descurtido');
+        likeBtn.classList.remove('curtido');
       });
     } else {
       likePost(idUser, objPost.id).then(() => {
-        window.location.reload();
+        likeBtn.classList.remove('descurtido');
+        likeBtn.classList.add('curtido');
       });
     }
   });
@@ -41,8 +43,10 @@ export const card = (objPost) => {
   // DELETE
   const delBtn = infoDiv.querySelector(`[data-del="${objPost.id}"]`);
   delBtn.addEventListener('click', () => {
+    window.alert('Tem certeza que deseja Deletar o post?'); 
     delPost(objPost.id).then(() => {
-      window.location.reload();
+      const deleteBtn = delBtn.parentNode;
+      deleteBtn.remove();
     });
   });
 
